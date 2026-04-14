@@ -1,0 +1,142 @@
+imputer:
+  base:
+    device: auto
+    experiment_name: xgb_aft_positive_imputer_10_times
+    seed: 42
+    test_size: 0.3
+  data:
+    T_max: 60
+    corrupt_rate: 0.2
+    device: auto
+    experiment_name: experiment_name
+    seed: 42
+    test_size: 0.2
+  model:
+    dropout: 0.1
+    hidden_size: 64
+    n_layers: 2
+  train:
+    base:
+      device: auto
+      experiment_name: experiment_name
+      seed: 42
+      test_size: 0.2
+    batch_size: 32
+    batch_size_choices:
+    - 32
+    - 64
+    - 96
+    - 128
+    device: auto
+    dropout_max: 0.2
+    dropout_min: 0.01
+    epochs: 30
+    experiment_name: experiment_name
+    features:
+    - S-Bil-T
+    - S-AST
+    - S-ALT
+    - S-GMT
+    - S-ALP
+    - S-CB
+    - S-Na
+    - S-K
+    - S-CL
+    - S-CRP
+    - S-Alb
+    - S-Gluk
+    - S-Urea
+    - S-Kreat
+    - S-CK
+    - S-CK-MB
+    - "P-Lakt\xE1t"
+    - S-FER
+    - HGB
+    - WBC
+    - PLT
+    - Neu abs
+    - Eo abs
+    - Ly abs
+    - PT (INR)
+    - APTT-R
+    - Fib
+    - CD3+
+    - CD4+
+    - CD8+
+    - CD4+/CD8+
+    - PDW
+    - S-PBNP
+    - S-IL6
+    - CD19+
+    - NK
+    - S-VITD
+    - NE/LY(NLR)
+    - "D-dim\xE9r HS"
+    hidden_size_choices:
+    - 32
+    - 64
+    - 96
+    - 128
+    lr: 0.001
+    lr_max: 0.003
+    lr_min: 0.0003
+    n_trials: 30
+    patience: 5
+    seed: 42
+    shuffle: true
+    test_size: 0.2
+    weight_decay: 0.05
+    weight_decay_max: 0.01
+    weight_decay_min: 1.0e-06
+survival:
+  base:
+    device: auto
+    experiment_name: xgb_aft_positive_imputer_10_times
+    seed: 42
+    test_size: 0.3
+  model:
+    aft_loss_distribution: logistic
+    alpha_max: 8.0
+    alpha_min: 4.0
+    base:
+      device: auto
+      experiment_name: experiment_name
+      seed: 42
+      test_size: 0.2
+    colsample_bytree_max: 0.9
+    colsample_bytree_min: 0.5
+    early_stopping_rounds: 8
+    eta_max: 0.1
+    eta_min: 0.01
+    gamma_max: 8.0
+    gamma_min: 2.0
+    lambda_max: 8.0
+    lambda_min: 4.0
+    max_depth_max: 4
+    max_depth_min: 2
+    max_features_choices:
+    - sqrt
+    - log2
+    max_features_min: sqrt
+    min_child_weight_max: 60
+    min_child_weight_min: 40
+    min_samples_leaf_max: 20
+    min_samples_leaf_min: 2
+    min_samples_split_max: 20
+    min_samples_split_min: 2
+    model_name: xgb_aft
+    n_estimators_max: 1000
+    n_estimators_min: 100
+    num_boost_round: 450
+    subsample_max: 0.9
+    subsample_min: 0.5
+    verbosity: 0
+  train:
+    device: auto
+    direction: maximize
+    experiment_name: experiment_name
+    n_splits: 3
+    n_trials: 30
+    seed: 42
+    shuffle: true
+    test_size: 0.2

@@ -1,0 +1,33 @@
+{
+    "wave": "wave_4",
+    "imputer": {
+        "best_params": {
+            "batch_size": 32,
+            "hidden_size": 128,
+            "dropout": 0.05662703321146805,
+            "lr": 0.0011467104510926383,
+            "weight_decay": 4.6166696675840035e-05
+        },
+        "train_loss": 0.11265418839143003,
+        "best_val_loss": 0.1009342148900032,
+        "seed": 42
+    },
+    "survival": {
+        "model_name": "xgb_cox",
+        "best_params": {
+            "eta": 0.014615838495013187,
+            "max_depth": 2,
+            "subsample": 0.5246996480826972,
+            "colsample_bytree": 0.5423955743933797,
+            "lambda": 5.616859670902433,
+            "alpha": 5.0228255564115605,
+            "gamma": 5.270759218847115,
+            "min_child_weight": 58
+        },
+        "train_c_index": 0.6381347455980658,
+        "best_val_c_index": 0.6573314915304533
+    },
+    "evaluation": {
+        "test_c_index": 0.6493272625759827
+    }
+}

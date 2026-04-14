@@ -1,0 +1,63 @@
+# Shared configurations
+base:
+  device: auto
+  seed: 42
+  experiment_name: rsf_positive_imputer_10_times
+  test_size: 0.3
+
+# Imputer pipeline configuration
+imputer:
+
+  data:
+    T_max: 60
+    corrupt_rate: 0.2
+
+  train:
+    # features:
+    epochs: 30
+    patience: 5
+    batch_size: 32
+    shuffle: true
+    lr: 1e-3
+    weight_decay: 0.05
+    # Optuna
+    n_trials: 30
+    # Optuna search space
+    batch_size_choices: [32, 64, 96, 128]
+    hidden_size_choices: [32, 64, 96, 128]
+    dropout_min: 0.01
+    dropout_max: 0.2
+    lr_min: 3e-4
+    lr_max: 3e-3
+    weight_decay_min: 1e-6
+    weight_decay_max: 1e-2
+
+  model:
+    hidden_size: 64
+    n_layers: 2
+    dropout: 0.1
+
+# Survival pipeline configuration
+survival:
+  
+  train:
+    n_splits: 3
+    shuffle: true
+    n_trials: 30
+    direction: maximize
+
+  model:
+    model_name: rsf
+    
+    # Optuna search space
+    n_estimators_min: 300
+    n_estimators_max: 600
+    
+    min_samples_split_min: 60
+    min_samples_split_max: 100
+    
+    min_samples_leaf_min: 120
+    min_samples_leaf_max: 250
+    
+    max_features_min: auto
+    max_features_choices: ["sqrt", "log2"]

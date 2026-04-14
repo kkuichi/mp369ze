@@ -1,0 +1,30 @@
+{
+    "run_id": 5,
+    "wave": "wave_1",
+    "imputer": {
+        "best_params": {
+            "batch_size": 64,
+            "hidden_size": 128,
+            "dropout": 0.03150633728500959,
+            "lr": 0.002033980169441448,
+            "weight_decay": 8.270683784626706e-05
+        },
+        "train_loss": 0.11218342868022685,
+        "best_val_loss": 0.10587603598833084,
+        "seed": 42
+    },
+    "survival": {
+        "model_name": "rsf",
+        "best_params": {
+            "n_estimators": 384,
+            "min_samples_split": 89,
+            "min_samples_leaf": 155,
+            "max_features": "log2"
+        },
+        "train_c_index": 0.8708406043274303,
+        "best_val_c_index": 0.8378757674400118
+    },
+    "evaluation": {
+        "test_c_index": 0.8188599412914419
+    }
+}

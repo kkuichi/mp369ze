@@ -1,0 +1,56 @@
+# Ignore virtual environment folders
+venv/
+.venv/
+env/
+.env/
+
+.lock
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore data files created during runtime
+*.sqlite3
+*.db
+*.log
+*.pkl
+*.xlsx
+*.csv
+*.parquet
+
+# Ignore data files
+DATA/
+
+# Ignore zip files
+*.zip
+
+# Ignore build and distribution files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Ignore test outputs
+.coverage
+htmlcov/
+*.pytest_cache/
+
+# Ignore system files (macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# Ignore experiment outputs
+# output/
+
+Article/
+
+uv.lock
+*.drawio
