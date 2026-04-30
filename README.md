@@ -44,7 +44,7 @@ git clone https://github.com/kkuichi/mp369ze.git
  ### Prepnutie na ing vetvu
 
 ```bash
-git checkout DP
+git checkout ing
 ```
 
 ### A) Použitie requirements.txt a manuálne vytvorenie virtuáleho prostredia
