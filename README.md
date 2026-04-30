@@ -39,7 +39,12 @@ Nasledujúce kroky popisujú, ako naklonovať repozitár a pripraviť virtuálne
 #### Klonovanie repozitára
 
 ```bash
-git clone https://github.com/kkuichi/mp369ze/tree/ing
+git clone https://github.com/kkuichi/mp369ze.git
+```
+ ### Prepnutie na ing vetvu
+
+```bash
+git checkout DP
 ```
 
 ### A) Použitie requirements.txt a manuálne vytvorenie virtuáleho prostredia
